@@ -2,11 +2,20 @@
 
 использовать URL https://www.rigla.ru
 
+- [Стандартный режим](#standart-mode)
+- [Замедление CPU 4x slowdown и эмуляцию сети Slow 3G](#slow-mode)
+
+<h1 id="standart-mode">Стандартный режим</h2>
+
 ## На вкладке Network:
+
+### Записать и сохранить в HAR архив профиль загрузки ресурсов при открытии страницы:
+
+[rigla-standart.ru.har](files\www.rigla-standart.ru.har)
 
 ### Дублирование ресурсов:
 
-Два продублированных запроса в связке (OPTIONS + GET):
+Два продублированных запроса в связке (OPTIONS preflight + GET):
 
 ![alt text](screenshots/image.png)
 
@@ -14,7 +23,7 @@
 
 ![alt text](screenshots/image1.png)
 
-Запросы продублировались три (причем 3 запроса OPTIONS):
+У двух из трех POST запросов одинаковое тело:
 
 ![alt text](screenshots/image3.png)
 
@@ -73,7 +82,14 @@
 
 ## На вкладке Performance:
 
+### Записать и сохранить в файл профиль загрузки страницы
+
+[Trace-standart.json](files\Trace-standart.json)
+
+### Измерить время в миллисекундах от начала навигации до событий
+
 First Paint (FP): 3635ms
+
 First Contentful Paint (FCP): 3635ms
 
 ![alt text](screenshots/image12.png)
@@ -95,7 +111,6 @@ Load (L): 4406ms
 На элементе img:js-image
 
 ![alt text](screenshots/image18.png)
-
 ![alt text](screenshots/image16.png)
 
 Измерить, сколько времени в миллисекундах тратится на разные этапы обработки документа (Loading, Scripting, Rendering, Painting):
@@ -109,20 +124,80 @@ Load (L): 4406ms
 
 ## На вкладке Coverage:
 
-Cохранить скриншот вкладки после загрузки страницы:
+### Cохранить скриншот вкладки после загрузки страницы:
 
 ![alt text](screenshots/image19.png)
 
 ![alt text](screenshots/image22.png)
 
-Измерить в килобайтах объём неиспользованного CSS в ходе загрузки страницы:
+### Измерить в килобайтах объём неиспользованного CSS в ходе загрузки страницы:
 
 ~45.4KB
 
 ![alt text](screenshots/image20.png)
 
-Измерить в килобайтах объём неиспользованного JS в ходе загрузки страницы:
+### Измерить в килобайтах объём неиспользованного JS в ходе загрузки страницы:
 
 ~5900KB
 
 ![alt text](screenshots/image21.png)
+
+<h1 id="slow-mode">Замедление CPU 4x slowdown и эмуляцию сети Slow 3G</h2>
+
+## На вкладке Network:
+
+### Записать и сохранить в HAR архив профиль загрузки ресурсов при открытии страницы:
+
+[rigla-slow.ru.har](files\www.rigla-slow.ru.har)
+
+Значимых изменений по сравнению со стандартным режимом нет.
+
+## На вкладке Perfomance:
+
+### Записать и сохранить в файл профиль загрузки страницы
+
+[Trace-slow.json](files\Trace-slow.json)
+
+### Измерить время в миллисекундах от начала навигации до событий
+
+First Paint (FP): 24510ms
+
+First Contentful Paint (FCP): 24510ms
+
+![alt text](screenshots/image26.png)
+
+Largest Contentful Paint (LCP): 110414ms
+
+![alt text](screenshots/image28.png)
+
+DOM Content Loaded (DCL): 35861ms
+
+![alt text](screenshots/image27.png)
+
+Load (L): 119725ms
+
+![alt text](screenshots/image29.png)
+
+каком DOM-элементе происходит LCP:
+
+На элементе img.popup-metadata-type-slider\_\_img
+
+![alt text](screenshots/image31.png)
+![alt text](screenshots/image30.png)
+
+Измерить, сколько времени в миллисекундах тратится на разные этапы обработки документа (Loading, Scripting, Rendering, Painting):
+
+- Loading: 140ms
+- Scripting: 17475ms
+- Rendering: 2281ms
+- Painting: 2211ms
+
+![alt text](screenshots/image25.png)
+
+## На вкладке Coverage:
+
+Значимых изменений по сравнению со стандартным режимом нет.
+
+### Cохранить скриншот вкладки после загрузки страницы:
+
+![alt text](screenshots/image32.png)
