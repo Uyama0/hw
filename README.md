@@ -7,9 +7,9 @@
 
 Дополнительные ссылки на профили (network, performance ) в гугл диск:
 
-- [Стандартный network]()
-- [Стандартный performance]()
-- [Замедленный network]()
+- [Стандартный network](https://drive.google.com/file/d/1W8SWDehQ99rdOwDQta36ox3esXq0RCnn/view?usp=sharing)
+- [Стандартный performance](https://drive.google.com/file/d/1nk8-uDWKTgwe9LebWGxHWVkVxD6IAyKn/view?usp=sharing)
+- [Замедленный network](https://drive.google.com/file/d/19sO2X6XrIZuZ4apqLMqeGUQ3Sdx-uEUo/view?usp=sharing)
 - [Замедленный performance](https://drive.google.com/file/d/18hbbPSU9JXHLpP1mEjeZ_nb5hvp6bs9i/view?usp=sharing)
 
 > Perfomance профиль с замедлением не загрузился на гитхаб.
@@ -63,15 +63,15 @@
 
 В основном здесь представлены шрифты и js скрипты.
 
-В сочетании с вкладкой coverage можно провести небольшой анализ и обнаружить, что большинство загруженных скриптов также имеют плохое соотношение использованного к неиспользованному JS.
-
 ![alt text](screenshots/image9.png)
+
+![alt text](screenshots/image33.png)
 
 ![alt text](screenshots/image23.png)
 
 А также присутствует один запрос, который падает в ошибку. Потенциально этот запрос мог что-то поломать.
 
-![alt text](screenshots/image8.png)
+![alt text](screenshots/image33.png)
 
 ### Что то еще:
 
