@@ -64,8 +64,8 @@
 В сочетании с вкладками coverage и lighthouse можно предположить, что `app.js?_t=01971f7a` и `/js/chunk-vendors.js?_t=9f02fabd` являются блокирующими источниками.
 
 ![alt text](screenshots/image34.png)
+
 ![alt text](screenshots/image35.png)
-![alt text](screenshots/image9.png)
 
 А также присутствует один запрос, который падает в ошибку. Потенциально этот запрос мог что-то поломать.
 
